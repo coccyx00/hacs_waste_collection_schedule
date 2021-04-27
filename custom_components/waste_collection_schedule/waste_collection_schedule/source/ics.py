@@ -172,6 +172,9 @@ class Source:
             )
             return "error"
 
+        # log the result. for debugging
+        _LOGGER.debug(r.text)
+
         return self._convert(r.text)
 
     def fetch_file(self, file):
