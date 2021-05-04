@@ -123,7 +123,7 @@ TEST_CASES = {
             "showBinsOrganic": "on",    # Grünschnitt
             "showBinsXmas": "on",       # Weihnachtsbaum
             "showBinsDsd": "on",        # Gelber Sack
-            "showBinsProb": "on",       # Problemmül
+            "showBinsProb": "on",       # Problemmüll
             # für /proxy.php
             #"url": 4,                   # 2: finde straße, 3: finde hausnummer, 4: anzeigen, 6: finde identnummer, 7: finde objektnummer
             #"server": 0,
