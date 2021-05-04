@@ -10,87 +10,92 @@ TITLE = "ICS"
 DESCRIPTION = "Source for ICS based schedules."
 URL = None
 TEST_CASES = {
-    "Dortmund, Dudenstr. 5": {
-        "url": "https://www.edg.de/ical/kalender.ics?Strasse=Dudenstr.&Hausnummer=5&Erinnerung=-1&Abfallart=1,2,3,4"
-    },
-    "Leipzig, Sandgrubenweg 27": {
-        "url": "https://www.stadtreinigung-leipzig.de/leistungen/abfallentsorgung/abfallkalender-entsorgungstermine.html&ical=true&loc=Sandgrubenweg%20%2027&lid=x38296"
-    },
-    "Ludwigsburg": {
-        "url": "https://www.avl-ludwigsburg.de/fileadmin/Files/Abfallkalender/ICS/Privat/Privat_{%Y}_Ossweil.ics"
-    },
-    "Esslingen, Bahnhof": {
-        "url": "https://api.abfall.io/?kh=DaA02103019b46345f1998698563DaAd&t=ics&s=1a862df26f6943997cef90233877a4fe"
-    },
-    "Test File": {
-        # Path is used here to allow to call the Source from any location.
-        # This is not required in a yaml configuration!
-        "file": Path(__file__)
-        .resolve()
-        .parents[1]
-        .joinpath("test/test.ics")
-    },
-    "Test File (recurring)": {
-        # Path is used here to allow to call the Source from any location.
-        # This is not required in a yaml configuration!
-        "file": Path(__file__)
-        .resolve()
-        .parents[1]
-        .joinpath("test/recurring.ics")
-    },
-    "München, Bahnstr. 11": {
-        "url": "https://www.awm-muenchen.de/index/abfuhrkalender.html?tx_awmabfuhrkalender_pi1%5Bsection%5D=ics&tx_awmabfuhrkalender_pi1%5Bstandplatzwahl%5D=true&tx_awmabfuhrkalender_pi1%5Bsinglestandplatz%5D=false&tx_awmabfuhrkalender_pi1%5Bstrasse%5D=Bahnstr.&tx_awmabfuhrkalender_pi1%5Bhausnummer%5D=11&tx_awmabfuhrkalender_pi1%5Bstellplatz%5D%5Brestmuell%5D=70024507&tx_awmabfuhrkalender_pi1%5Bstellplatz%5D%5Bpapier%5D=70024507&tx_awmabfuhrkalender_pi1%5Bstellplatz%5D%5Bbio%5D=70024507&tx_awmabfuhrkalender_pi1%5Bleerungszyklus%5D%5BR%5D=001%3BU&tx_awmabfuhrkalender_pi1%5Bleerungszyklus%5D%5BP%5D=1%2F2%3BG&tx_awmabfuhrkalender_pi1%5Bleerungszyklus%5D%5BB%5D=1%2F2%3BU&tx_awmabfuhrkalender_pi1%5Byear%5D={%Y}"
-    },
-    "Buxtehude, Am Berg": {
-        "url": "https://abfall.landkreis-stade.de/api_v2/collection_dates/1/ort/10/strasse/90/hausnummern/1/abfallarten/R02-R04-B02-D04-D12-P04-R12-R14-W0-R22-R24-R31/kalender.ics"
-    },
+    #"Dortmund, Dudenstr. 5": {
+    #    "url": "https://www.edg.de/ical/kalender.ics?Strasse=Dudenstr.&Hausnummer=5&Erinnerung=-1&Abfallart=1,2,3,4"
+    #},
+    #"Leipzig, Sandgrubenweg 27": {
+    #    "url": "https://www.stadtreinigung-leipzig.de/leistungen/abfallentsorgung/abfallkalender-entsorgungstermine.html&ical=true&loc=Sandgrubenweg%20%2027&lid=x38296"
+    #},
+    #"Ludwigsburg": {
+    #    "url": "https://www.avl-ludwigsburg.de/fileadmin/Files/Abfallkalender/ICS/Privat/Privat_{%Y}_Ossweil.ics"
+    #},
+    #"Esslingen, Bahnhof": {
+    #    "url": "https://api.abfall.io/?kh=DaA02103019b46345f1998698563DaAd&t=ics&s=1a862df26f6943997cef90233877a4fe"
+    #},
+    #"Test File": {
+    #    # Path is used here to allow to call the Source from any location.
+    #    # This is not required in a yaml configuration!
+    #    "file": Path(__file__)
+    #    .resolve()
+    #    .parents[1]
+    #    .joinpath("test/test.ics")
+    #},
+    #"Test File (recurring)": {
+    #    # Path is used here to allow to call the Source from any location.
+    #    # This is not required in a yaml configuration!
+    #    "file": Path(__file__)
+    #    .resolve()
+    #    .parents[1]
+    #    .joinpath("test/recurring.ics")
+    #},
+    #"München, Bahnstr. 11": {
+    #    "url": "https://www.awm-muenchen.de/index/abfuhrkalender.html?tx_awmabfuhrkalender_pi1%5Bsection%5D=ics&tx_awmabfuhrkalender_pi1%5Bstandplatzwahl%5D=true&tx_awmabfuhrkalender_pi1%5Bsinglestandplatz%5D=false&tx_awmabfuhrkalender_pi1%5Bstrasse%5D=Bahnstr.&tx_awmabfuhrkalender_pi1%5Bhausnummer%5D=11&tx_awmabfuhrkalender_pi1%5Bstellplatz%5D%5Brestmuell%5D=70024507&tx_awmabfuhrkalender_pi1%5Bstellplatz%5D%5Bpapier%5D=70024507&tx_awmabfuhrkalender_pi1%5Bstellplatz%5D%5Bbio%5D=70024507&tx_awmabfuhrkalender_pi1%5Bleerungszyklus%5D%5BR%5D=001%3BU&tx_awmabfuhrkalender_pi1%5Bleerungszyklus%5D%5BP%5D=1%2F2%3BG&tx_awmabfuhrkalender_pi1%5Bleerungszyklus%5D%5BB%5D=1%2F2%3BU&tx_awmabfuhrkalender_pi1%5Byear%5D={%Y}"
+    #},
+    #"Buxtehude, Am Berg": {
+    #    "url": "https://abfall.landkreis-stade.de/api_v2/collection_dates/1/ort/10/strasse/90/hausnummern/1/abfallarten/R02-R04-B02-D04-D12-P04-R12-R14-W0-R22-R24-R31/kalender.ics"
+    #},
     "Hausmüllinfo: ASR Chemnitz": {
         "url": "https://asc.hausmuell.info/ics/ics.php",
         "method": "POST",
         "params": {
-            "hidden_id_egebiet": 439087,
-            "input_ort": "Chemnitz",
-            "input_str": "Straße der Nationen",
-            "input_hnr": 2,
+            "input_objektnr_top": 5314101,
+            "input_identnr_top": "Identnummer",
+            "input_ort": "Ort",
+            "input_str": "Straße",
+            "input_hnr": "Hausnummer",
+            "hidden_id_egebiet": 453094,    # gültig am 4.5., alternativ über url=7 die id rausbekommen
             "hidden_send_btn": "ics",
             # "hiddenYear": 2021,
-            "hidden_id_ort": 10,
+            "hidden_id_ort": 0,
             "hidden_id_ortsteil": 0,
-            "hidden_id_str": 17814,
-            "hidden_id_hnr": 5538100,
+            "hidden_id_str": 0,
+            "hidden_id_hnr": 0,
             "hidden_kalenderart": "privat",
-            "showBinsBio": "on",
-            "showBinsRest": "on",
-            "showBinsRest_rc": "on",
-            "showBinsPapier": "on",
-            "showBinsOrganic": "on",
-            "showBinsXmas": "on",
-            "showBinsDsd": "on",
-            "showBinsProb": "on",
+            "showBinsBio": "on",        # Bioabfall
+            "showBinsRest": "on",       # Restmüll 40 - 240 Liter
+            "showBinsRest_rc": "on",    # Restmüll 660 - 1100 Liter
+            "showBinsPapier": "on",     # Papier
+            "showBinsOrganic": "on",    # Grünschnitt
+            "showBinsXmas": "on",       # Weihnachtsbaum
+            "showBinsDsd": "on",        # Gelber Sack
+            "showBinsProb": "on",       # Problemmül
+            # für /proxy.php
+            #"url": 4,                   # 2: finde straße, 3: finde hausnummer, 4: anzeigen, 6: finde identnummer, 7: finde objektnummer
+            #"server": 0,
         },
         "year_field": "hiddenYear",
     },
-    "Abfall Zollernalbkreis, Ebingen": {
-        "url": "https://www.abfallkalender-zak.de",
-        "params": {
-            "city": "2,3,4",
-            "street": "3",
-            "types[]": [
-                "restmuell",
-                "gelbersack",
-                "papiertonne",
-                "biomuell",
-                "gruenabfall",
-                "schadstoffsammlung",
-                "altpapiersammlung",
-                "schrottsammlung",
-                "weihnachtsbaeume",
-                "elektrosammlung",
-            ],
-            "go_ics": "Download",
-        },
-        "year_field": "year",
-    },
+    #"Abfall Zollernalbkreis, Ebingen": {
+    #    "url": "https://www.abfallkalender-zak.de",
+    #    "params": {
+    #        "city": "2,3,4",
+    #        "street": "3",
+    #        "types[]": [
+    #            "restmuell",
+    #            "gelbersack",
+    #            "papiertonne",
+    #            "biomuell",
+    #            "gruenabfall",
+    #            "schadstoffsammlung",
+    #            "altpapiersammlung",
+    #            "schrottsammlung",
+    #            "weihnachtsbaeume",
+    #            "elektrosammlung",
+    #        ],
+    #        "go_ics": "Download",
+    #    },
+    #    "year_field": "year",
+    #},
 }
 
 

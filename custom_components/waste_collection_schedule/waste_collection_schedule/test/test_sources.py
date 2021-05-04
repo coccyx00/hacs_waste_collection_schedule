@@ -31,6 +31,8 @@ def main():
         )
 
     for f in files:
+        if f != "ics":
+            continue
         # iterate through all *.py files in waste_collection_schedule/source
         print(f"Testing source {f} ...")
         module = importlib.import_module(f"waste_collection_schedule.source.{f}")
