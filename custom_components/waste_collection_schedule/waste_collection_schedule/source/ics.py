@@ -98,8 +98,39 @@ TEST_CASES = {
     "UTF-8-SIG (UTF-8 with BOM)": {
         "url": "https://servicebetrieb.koblenz.de/abfallwirtschaft/entsorgungstermine-digital/entsorgungstermine-2023-digital/altstadt-2023.ics?cid=2ui7",
     },
-}
 
+    "Hausmüllinfo: ASR Chemnitz": {
+        "url": "https://asc.hausmuell.info/ics/ics.php",
+        "method": "POST",
+        "params": {
+            "input_objektnr_top": 5314101,
+            "input_identnr_top": "Identnummer",
+            "input_ort": "Ort",
+            "input_str": "Straße",
+            "input_hnr": "Hausnummer",
+            "hidden_id_egebiet": 453094,    # gültig am 4.5., alternativ über url=7 die id rausbekommen
+            "hidden_send_btn": "ics",
+            # "hiddenYear": 2021,
+            "hidden_id_ort": 0,
+            "hidden_id_ortsteil": 0,
+            "hidden_id_str": 0,
+            "hidden_id_hnr": 0,
+            "hidden_kalenderart": "privat",
+            "showBinsBio": "on",        # Bioabfall
+            "showBinsRest": "on",       # Restmüll 40 - 240 Liter
+            "showBinsRest_rc": "on",    # Restmüll 660 - 1100 Liter
+            "showBinsPapier": "on",     # Papier
+            "showBinsOrganic": "on",    # Grünschnitt
+            "showBinsXmas": "on",       # Weihnachtsbaum
+            "showBinsDsd": "on",        # Gelber Sack
+            "showBinsProb": "on",       # Problemmül
+            # für /proxy.php
+            #"url": 4,                   # 2: finde straße, 3: finde hausnummer, 4: anzeigen, 6: finde identnummer, 7: finde objektnummer
+            #"server": 0,
+        },
+        "year_field": "hiddenYear",
+    },
+}
 
 HEADERS = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 _LOGGER = logging.getLogger(__name__)
