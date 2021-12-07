@@ -10,92 +10,108 @@ TITLE = "ICS"
 DESCRIPTION = "Source for ICS based schedules."
 URL = None
 TEST_CASES = {
-    #"Dortmund, Dudenstr. 5": {
-    #    "url": "https://www.edg.de/ical/kalender.ics?Strasse=Dudenstr.&Hausnummer=5&Erinnerung=-1&Abfallart=1,2,3,4"
-    #},
-    #"Leipzig, Sandgrubenweg 27": {
-    #    "url": "https://www.stadtreinigung-leipzig.de/leistungen/abfallentsorgung/abfallkalender-entsorgungstermine.html&ical=true&loc=Sandgrubenweg%20%2027&lid=x38296"
-    #},
-    #"Ludwigsburg": {
-    #    "url": "https://www.avl-ludwigsburg.de/fileadmin/Files/Abfallkalender/ICS/Privat/Privat_{%Y}_Ossweil.ics"
-    #},
-    #"Esslingen, Bahnhof": {
-    #    "url": "https://api.abfall.io/?kh=DaA02103019b46345f1998698563DaAd&t=ics&s=1a862df26f6943997cef90233877a4fe"
-    #},
-    #"Test File": {
-    #    # Path is used here to allow to call the Source from any location.
-    #    # This is not required in a yaml configuration!
-    #    "file": Path(__file__)
-    #    .resolve()
-    #    .parents[1]
-    #    .joinpath("test/test.ics")
-    #},
-    #"Test File (recurring)": {
-    #    # Path is used here to allow to call the Source from any location.
-    #    # This is not required in a yaml configuration!
-    #    "file": Path(__file__)
-    #    .resolve()
-    #    .parents[1]
-    #    .joinpath("test/recurring.ics")
-    #},
-    #"München, Bahnstr. 11": {
-    #    "url": "https://www.awm-muenchen.de/index/abfuhrkalender.html?tx_awmabfuhrkalender_pi1%5Bsection%5D=ics&tx_awmabfuhrkalender_pi1%5Bstandplatzwahl%5D=true&tx_awmabfuhrkalender_pi1%5Bsinglestandplatz%5D=false&tx_awmabfuhrkalender_pi1%5Bstrasse%5D=Bahnstr.&tx_awmabfuhrkalender_pi1%5Bhausnummer%5D=11&tx_awmabfuhrkalender_pi1%5Bstellplatz%5D%5Brestmuell%5D=70024507&tx_awmabfuhrkalender_pi1%5Bstellplatz%5D%5Bpapier%5D=70024507&tx_awmabfuhrkalender_pi1%5Bstellplatz%5D%5Bbio%5D=70024507&tx_awmabfuhrkalender_pi1%5Bleerungszyklus%5D%5BR%5D=001%3BU&tx_awmabfuhrkalender_pi1%5Bleerungszyklus%5D%5BP%5D=1%2F2%3BG&tx_awmabfuhrkalender_pi1%5Bleerungszyklus%5D%5BB%5D=1%2F2%3BU&tx_awmabfuhrkalender_pi1%5Byear%5D={%Y}"
-    #},
-    #"Buxtehude, Am Berg": {
-    #    "url": "https://abfall.landkreis-stade.de/api_v2/collection_dates/1/ort/10/strasse/90/hausnummern/1/abfallarten/R02-R04-B02-D04-D12-P04-R12-R14-W0-R22-R24-R31/kalender.ics"
-    #},
-    "Hausmüllinfo: ASR Chemnitz": {
-        "url": "https://asc.hausmuell.info/ics/ics.php",
+    "Dortmund, Dudenstr. 5": {
+        "url": "https://www.edg.de/ical/kalender.ics?Strasse=Dudenstr.&Hausnummer=5&Erinnerung=-1&Abfallart=1,2,3,4"
+    },
+    "Leipzig, Sandgrubenweg 27": {
+        "url": "https://stadtreinigung-leipzig.de/wir-kommen-zu-ihnen/abfallkalender/ical.ics?position_nos=38296&name=Sandgrubenweg%2027"
+    },
+    "Ludwigsburg": {
+        "url": "https://www.avl-ludwigsburg.de/fileadmin/Files/Abfallkalender/ICS/Privat/Privat_{%Y}_Ossweil.ics"
+    },
+    "Esslingen, Bahnhof": {
+        "url": "https://api.abfall.io/?kh=DaA02103019b46345f1998698563DaAd&t=ics&s=1a862df26f6943997cef90233877a4fe"
+    },
+    "Test File": {
+        # Path is used here to allow to call the Source from any location.
+        # This is not required in a yaml configuration!
+        "file": str(Path(__file__).resolve().parents[1].joinpath("test/test.ics"))
+    },
+    "Test File (recurring)": {
+        # Path is used here to allow to call the Source from any location.
+        # This is not required in a yaml configuration!
+        "file": str(Path(__file__).resolve().parents[1].joinpath("test/recurring.ics"))
+    },
+    "München, Bahnstr. 11": {
+        "url": "https://www.awm-muenchen.de/entsorgen/abfuhrkalender?tx_awmabfuhrkalender_abfuhrkalender%5Bhausnummer%5D=11&tx_awmabfuhrkalender_abfuhrkalender%5Bleerungszyklus%5D%5BB%5D=1%2F2%3BU&tx_awmabfuhrkalender_abfuhrkalender%5Bleerungszyklus%5D%5BP%5D=1%2F2%3BG&tx_awmabfuhrkalender_abfuhrkalender%5Bleerungszyklus%5D%5BR%5D=001%3BU&tx_awmabfuhrkalender_abfuhrkalender%5Bsection%5D=ics&tx_awmabfuhrkalender_abfuhrkalender%5Bsinglestandplatz%5D=false&tx_awmabfuhrkalender_abfuhrkalender%5Bstandplatzwahl%5D=true&tx_awmabfuhrkalender_abfuhrkalender%5Bstellplatz%5D%5Bbio%5D=70024507&tx_awmabfuhrkalender_abfuhrkalender%5Bstellplatz%5D%5Bpapier%5D=70024507&tx_awmabfuhrkalender_abfuhrkalender%5Bstellplatz%5D%5Brestmuell%5D=70024507&tx_awmabfuhrkalender_abfuhrkalender%5Bstrasse%5D=bahnstr.&tx_awmabfuhrkalender_abfuhrkalender%5Byear%5D={%Y}"
+    },
+    "Buxtehude, Am Berg": {
+        "url": "https://abfall.landkreis-stade.de/api_v2/collection_dates/1/ort/10/strasse/90/hausnummern/1/abfallarten/R02-R04-B02-D04-D12-P04-R12-R14-W0-R22-R24-R31/kalender.ics"
+    },
+    #    "Hausmüllinfo: ASR Chemnitz": {
+    #        "url": "https://asc.hausmuell.info/ics/ics.php",
+    #        "method": "POST",
+    #        "params": {
+    #            "hidden_id_egebiet": 439087,
+    #            "input_ort": "Chemnitz",
+    #            "input_str": "Straße der Nationen",
+    #            "input_hnr": 2,
+    #            "hidden_send_btn": "ics",
+    #            # "hiddenYear": 2021,
+    #            "hidden_id_ort": 10,
+    #            "hidden_id_ortsteil": 0,
+    #            "hidden_id_str": 17814,
+    #            "hidden_id_hnr": 5538100,
+    #            "hidden_kalenderart": "privat",
+    #            "showBinsBio": "on",
+    #            "showBinsRest": "on",
+    #            "showBinsRest_rc": "on",
+    #            "showBinsPapier": "on",
+    #            "showBinsOrganic": "on",
+    #            "showBinsXmas": "on",
+    #            "showBinsDsd": "on",
+    #            "showBinsProb": "on",
+    #        },
+    #        "year_field": "hiddenYear",
+    #    },
+    "Abfall Zollernalbkreis, Ebingen": {
+        "url": "https://www.abfallkalender-zak.de",
+        "params": {
+            "city": "2,3,4",
+            "street": "3",
+            "types[]": [
+                "restmuell",
+                "gelbersack",
+                "papiertonne",
+                "biomuell",
+                "gruenabfall",
+                "schadstoffsammlung",
+                "altpapiersammlung",
+                "schrottsammlung",
+                "weihnachtsbaeume",
+                "elektrosammlung",
+            ],
+            "go_ics": "Download",
+        },
+        "year_field": "year",
+    },
+    "Detmold": {
+        "url": "https://abfuhrkalender.detmold.de/icsmaker.php",
+        "method": "GET",
+        "params": {"strid": 338},
+        "year_field": "year",
+    },
+    "EAW Rheingau Taunus": {
+        "url": "https://www.eaw-rheingau-taunus.de/abfallkalender/calendar.ics?streetid=1429",
+        "split_at": ",",
+    },
+    "Recollect, Ottawa": {
+        "url": "https://recollect.a.ssl.fastly.net/api/places/BCCDF30E-578B-11E4-AD38-5839C200407A/services/208/events.en.ics",
+        "split_at": "\\, [and ]*",
+    },
+    "Frankfurt am Main, Achenbachstrasse 3": {
+        "url": "https://www.fes-frankfurt.de/abfallkalender/QWNoZW5iYWNoc3RyLnwzfDYwNTk2.ics"
+    },
+    "Erlensee, Am Haspel": {
+        "url": "https://sperrmuell.erlensee.de/?type=reminder",
         "method": "POST",
         "params": {
-            "input_objektnr_top": 5314101,
-            "input_identnr_top": "Identnummer",
-            "input_ort": "Ort",
-            "input_str": "Straße",
-            "input_hnr": "Hausnummer",
-            "hidden_id_egebiet": 453094,    # gültig am 4.5., alternativ über url=7 die id rausbekommen
-            "hidden_send_btn": "ics",
-            # "hiddenYear": 2021,
-            "hidden_id_ort": 0,
-            "hidden_id_ortsteil": 0,
-            "hidden_id_str": 0,
-            "hidden_id_hnr": 0,
-            "hidden_kalenderart": "privat",
-            "showBinsBio": "on",        # Bioabfall
-            "showBinsRest": "on",       # Restmüll 40 - 240 Liter
-            "showBinsRest_rc": "on",    # Restmüll 660 - 1100 Liter
-            "showBinsPapier": "on",     # Papier
-            "showBinsOrganic": "on",    # Grünschnitt
-            "showBinsXmas": "on",       # Weihnachtsbaum
-            "showBinsDsd": "on",        # Gelber Sack
-            "showBinsProb": "on",       # Problemmüll
-            # für /proxy.php
-            #"url": 4,                   # 2: finde straße, 3: finde hausnummer, 4: anzeigen, 6: finde identnummer, 7: finde objektnummer
-            #"server": 0,
+            "street": 8,
+            "eventType[]": [27, 23, 19, 20, 21, 24, 22, 25, 26],
+            "timeframe": 23,
+            "download": "ical",
         },
-        "year_field": "hiddenYear",
     },
-    #"Abfall Zollernalbkreis, Ebingen": {
-    #    "url": "https://www.abfallkalender-zak.de",
-    #    "params": {
-    #        "city": "2,3,4",
-    #        "street": "3",
-    #        "types[]": [
-    #            "restmuell",
-    #            "gelbersack",
-    #            "papiertonne",
-    #            "biomuell",
-    #            "gruenabfall",
-    #            "schadstoffsammlung",
-    #            "altpapiersammlung",
-    #            "schrottsammlung",
-    #            "weihnachtsbaeume",
-    #            "elektrosammlung",
-    #        ],
-    #        "go_ics": "Download",
-    #    },
-    #    "year_field": "year",
-    #},
 }
 
 
@@ -112,12 +128,13 @@ class Source:
         params=None,
         year_field=None,
         method="GET",
+        split_at=None,
     ):
         self._url = url
         self._file = file
         if bool(self._url is not None) == bool(self._file is not None):
             raise RuntimeError("Specify either url or file")
-        self._ics = ICS(offset)
+        self._ics = ICS(offset=offset, split_at=split_at)
         self._params = params
         self._year_field = year_field  # replace this field in params with current year
         self._method = method  # The method to send the params
@@ -142,10 +159,11 @@ class Source:
                 if now.month == 12:
                     # also get data for next year if we are already in december
                     url = self._url.replace("{%Y}", str(now.year + 1))
-                    self._params[self._year_field] = str(now.year + 1)
+                    if self._year_field is not None:
+                        self._params[self._year_field] = str(now.year + 1)
 
                     try:
-                        entries.extend(self.fetch_url(url), self._params)
+                        entries.extend(self.fetch_url(url, self._params))
                     except Exception:
                         # ignore if fetch for next year fails
                         pass

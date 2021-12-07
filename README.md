@@ -4,6 +4,8 @@ Waste Collection Schedule provides schedules from waste collection service provi
 
 *For developers:* This framework can be easily enhanced to support further waste collection service providers or other services which provide schedules.
 
+If you like this component, please give it a star on [github](https://github.com/mampfes/hacs_waste_collection_schedule).
+
 ## Table of Contents
 
 - [Examples](#examples)
@@ -53,7 +55,11 @@ Currently the following service providers are supported:
 ### Australia
 
 - [Brisbane City Council](./doc/source/brisbane_qld_gov_au.md)
-- [The Hills Council, Sidney](./doc/source/thehills_nsw_gov_au.md)
+- [The Hills Council, Sydney](./doc/source/thehills_nsw_gov_au.md)
+- [Stonnington City Council, Melbourne](./doc/source/stonnington_vic_gov_au.md)
+
+### Belgium
+- [Hygea.be](./doc/source/hygea_be.md)
 
 ### Germany
 
@@ -61,21 +67,36 @@ Currently the following service providers are supported:
 - [Abfall_Kreis_Tuebingen.de](./doc/source/abfall_kreis_tuebingen_de.md)
 - [AbfallNavi.de (RegioIT.de)](./doc/source/abfallnavi_de.md)
 - [Abfallwirtschaft Stuttgart](./doc/source/stuttgart_de.md)
+- [Abfallwirtschaft Südholstein](./doc/source/awsh_de.md)
+- [Abfallwirtschaft Zollernalbkreis](./doc/source/abfall_zollernalbkreis_de.md)
 - [AWBKoeln.de](./doc/source/awbkoeln_de.md)
+- [AWIDO-online.de](./doc/source/awido_de.md)
+- [Berlin-Recycling.de](./doc/source/berlin_recycling_de.md)
 - [BSR.de / Berliner Stadtreinigungsbetriebe](./doc/source/bsr_de.md)
 - [Jumomind.de](./doc/source/jumomind_de.md)
+- [Landkreis-Wittmund.de](./doc/source/landkreis_wittmund_de.md)
 - [Muellmax.de](./doc/source/muellmax_de.md)
-- [Stadtreinigung.Hamburg](./doc/source/stadtreinigung_hamburg.md)
-- [Abfallwirtschaft Zollernalbkreis](./doc/source/abfall_zollernalbkreis_de.md)
 - [MyMuell App](./doc/source/jumomind_de.md)
+- [Oberhausen.de](./doc/source/oberhausen_de.md)
+- [Rhein-Hunsrück Entsorgung (RHE)](./doc/source/rh_entsorgung_de.md)
+- [Sector27.de](./doc/source/sector27_de.md)
+- [Stadtreinigung.Hamburg](./doc/source/stadtreinigung_hamburg.md)
+- [Stadtreinigung-Leipzig.de](./doc/source/stadtreinigung_leipzig_de.md)
+- [WAS Wolfsburg](./doc/source/was_wolfsburg_de.md)
 
 ### Netherlands
 
 - [Ximmio](./doc/source/ximmio_nl.md)
+- [HVCGroep](./doc/source/hvcgroep_nl.md)
 
 ### New Zealand
 
 - [Wastenet.org.nz](./doc/source/wastenet_org_nz.md)
+- [Aucklandcouncil.govt.nz](./doc/source/aucklandcouncil_govt_nz.md)
+
+### Sweden
+- [Lerum.se](./doc/source/lerum_se.md)
+- [Sysav.se](./doc/source/sysav_se.md)
 
 ### United States of America
 
@@ -582,3 +603,6 @@ class Source:
 ```
 
 See also: [custom_components/waste_collection_schedule/waste_collection_schedule/source/example.py](./custom_components/waste_collection_schedule/waste_collection_schedule/source/example.py)
+
+##Guides
+There is an HowTo Video in german: https://youtu.be/MzQgARDvRww
