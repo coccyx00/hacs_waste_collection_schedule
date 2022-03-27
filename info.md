@@ -40,32 +40,45 @@ Currently the following service providers are supported:
 
 ### Australia
 
+- [Banyule City Council](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/banyule_vic_gov_au.md)
 - [Brisbane City Council](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/brisbane_qld_gov_au.md)
+- [North Adelaide Waste Management Authority, South Australia](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/nawma_sa_gov_au.md)
 - [The Hills Council, Sydney](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/thehills_nsw_gov_au.md)
+- [Macedon Ranges Shire Council, Melbourne](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/mrsc_vic_gov_au.md)
 - [Stonnington City Council, Melbourne](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/stonnington_vic_gov_au.md)
 
+### Austria
+
+- [Data.Umweltprofis](https://github.com/mampfes/hacs_waste_collection_schedule/doc/source/data_umweltprofis_at.md)
+
 ### Belgium
+
 - [Hygea](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/hygea_be.md)
+- [Recycle! / RecycleApp.be](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/recycleapp_be.md)
 
 ### Germany
 
 - [Abfall.IO / AbfallPlus.de](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/abfall_io.md)
-- [Abfall_Kreis_Tuebingen.de](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/abfall_kreis_tuebingen_de.md)
 - [AbfallNavi.de (RegioIT.de)](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/abfallnavi_de.md)
+- [Abfallkalender Würzburg](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/wuerzburg_de.md)
+- [Abfallwirtschaft Rendsburg](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/awr_de.md)
 - [Abfallwirtschaft Stuttgart](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/stuttgart_de.md)
 - [Abfallwirtschaft Südholstein](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/awsh_de.md)
 - [Abfallwirtschaft Zollernalbkreis](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/abfall_zollernalbkreis_de.md)
+- [AWB Bad Kreuznach](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/awb_bad_kreuznach_de.md)
 - [AWBKoeln.de](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/awbkoeln_de.md)
 - [AWIDO-online.de](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/awido_de.md)
 - [Berlin-Recycling.de](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/berlin_recycling_de.md)
 - [BSR.de / Berliner Stadtreinigungsbetriebe](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/bsr_de.md)
+- [EGN-Abfallkalender.de](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master//doc/source/egn_abfallkalender_de.md)
 - [Jumomind.de](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/jumomind_de.md)
+- [KWB-Goslar.de](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/kwb_goslar_de.md)
 - [Landkreis-Wittmund.de](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/landkreis_wittmund_de.md)
 - [Muellmax.de](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/muellmax_de.md)
 - [MyMuell App](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/jumomind_de.md)
-- [Oberhausen.de](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/oberhausen_de.md)
 - [Rhein-Hunsrück Entsorgung (RHE)](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/rh_entsorgung_de.md)
 - [Sector27.de](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/sector27_de.md)
+- [Stadtreinigung Dresden](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/stadtreinigung_dresden_de.md)
 - [Stadtreinigung.Hamburg](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/stadtreinigung_hamburg.md)
 - [Stadtreinigung-Leipzig.de](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/stadtreinigung_leipzig_de.md)
 - [WAS Wolfsburg](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/was_wolfsburg_de.md)
@@ -77,14 +90,27 @@ Currently the following service providers are supported:
 
 ### New Zealand
 
-- [Wastenet.org.nz](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/wastenet_org_nz.md)
-- [Aucklandcouncil.govt.nz](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/aucklandcouncil_govt_nz.md)
+- [Auckland](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/aucklandcouncil_govt_nz.md)
+- [Christchurch](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/ccc_govt_nz.md)
+- [Gore, Invercargill & Southland](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/wastenet_org_nz.md)
+- [Wellington](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/wellington_govt_nz.md)
 
 ### Sweden
+
 - [Lerum.se](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/lerum_se.md)
 - [Sysav.se](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/sysav_se.md)
+
+### Switzerland
+
+- [Lindau.ch](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/lindau_ch.md)
 
 ### United States of America
 
 - [PGH.ST](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/pgh_st.md)
 - [Seattle Public Utilities](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/seattle_gov.md)
+
+### United Kingdom
+
+- [Cambridge.gov.uk](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/cambridge_gov_uk.md)
+- [Colchester.gov.uk](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/colchester_gov_uk.md)
+- [York.gov.uk](https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/york_gov_uk.md)

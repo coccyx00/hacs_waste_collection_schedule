@@ -54,32 +54,45 @@ Currently the following service providers are supported:
 
 ### Australia
 
+- [Banyule City Council](./doc/source/banyule_vic_gov_au.md)
 - [Brisbane City Council](./doc/source/brisbane_qld_gov_au.md)
+- [North Adelaide Waste Management Authority, South Australia](./doc/source/nawma_sa_gov_au.md)
 - [The Hills Council, Sydney](./doc/source/thehills_nsw_gov_au.md)
+- [Macedon Ranges Shire Council, Melbourne](./doc/source/mrsc_vic_gov_au.md)
 - [Stonnington City Council, Melbourne](./doc/source/stonnington_vic_gov_au.md)
 
+### Austria
+
+- [Data.Umweltprofis](./doc/source/data_umweltprofis_at.md)
+
 ### Belgium
+
 - [Hygea.be](./doc/source/hygea_be.md)
+- [Recycle! / RecycleApp.be](./doc/source/recycleapp_be.md)
 
 ### Germany
 
 - [Abfall.IO / AbfallPlus.de](./doc/source/abfall_io.md)
-- [Abfall_Kreis_Tuebingen.de](./doc/source/abfall_kreis_tuebingen_de.md)
 - [AbfallNavi.de (RegioIT.de)](./doc/source/abfallnavi_de.md)
+- [Abfallkalender Würzburg](./doc/source/wuerzburg_de.md)
+- [Abfallwirtschaft Rendsburg](./doc/source/awr_de.md)
 - [Abfallwirtschaft Stuttgart](./doc/source/stuttgart_de.md)
 - [Abfallwirtschaft Südholstein](./doc/source/awsh_de.md)
 - [Abfallwirtschaft Zollernalbkreis](./doc/source/abfall_zollernalbkreis_de.md)
+- [AWB Bad Kreuznach](./doc/source/awb_bad_kreuznach_de.md)
 - [AWBKoeln.de](./doc/source/awbkoeln_de.md)
 - [AWIDO-online.de](./doc/source/awido_de.md)
 - [Berlin-Recycling.de](./doc/source/berlin_recycling_de.md)
 - [BSR.de / Berliner Stadtreinigungsbetriebe](./doc/source/bsr_de.md)
+- [EGN-Abfallkalender.de](./doc/source/egn_abfallkalender_de.md)
 - [Jumomind.de](./doc/source/jumomind_de.md)
+- [KWB-Goslar.de](./doc/source/kwb_goslar_de.md)
 - [Landkreis-Wittmund.de](./doc/source/landkreis_wittmund_de.md)
 - [Muellmax.de](./doc/source/muellmax_de.md)
 - [MyMuell App](./doc/source/jumomind_de.md)
-- [Oberhausen.de](./doc/source/oberhausen_de.md)
 - [Rhein-Hunsrück Entsorgung (RHE)](./doc/source/rh_entsorgung_de.md)
 - [Sector27.de](./doc/source/sector27_de.md)
+- [Stadtreinigung Dresden](./doc/source/stadtreinigung_dresden_de.md)
 - [Stadtreinigung.Hamburg](./doc/source/stadtreinigung_hamburg.md)
 - [Stadtreinigung-Leipzig.de](./doc/source/stadtreinigung_leipzig_de.md)
 - [WAS Wolfsburg](./doc/source/was_wolfsburg_de.md)
@@ -91,17 +104,30 @@ Currently the following service providers are supported:
 
 ### New Zealand
 
-- [Wastenet.org.nz](./doc/source/wastenet_org_nz.md)
-- [Aucklandcouncil.govt.nz](./doc/source/aucklandcouncil_govt_nz.md)
+- [Auckland](./doc/source/aucklandcouncil_govt_nz.md)
+- [Christchurch](./doc/source/ccc_govt_nz.md)
+- [Gore, Invercargill & Southland](./doc/source/wastenet_org_nz.md)
+- [Wellington](./doc/source/wellington_govt_nz.md)
 
 ### Sweden
+
 - [Lerum.se](./doc/source/lerum_se.md)
 - [Sysav.se](./doc/source/sysav_se.md)
+
+### Switzerland
+
+- [Lindau.ch](./doc/source/lindau_ch.md)
 
 ### United States of America
 
 - [PGH.ST](./doc/source/pgh_st.md)
 - [Seattle Public Utilities](./doc/source/seattle_gov.md)
+
+### United Kingdom
+
+- [Cambridge.gov.uk](./doc/source/cambridge_gov_uk.md)
+- [Colchester.gov.uk](./doc/source/colchester_gov_uk.md)
+- [York.gov.uk](./doc/source/york_gov_uk.md)
 
 ## Installation
 
@@ -562,13 +588,21 @@ Prerequisites: You already have dedicated sensors per waste type and want to sho
 
 Add `add_days_to: True` to the configuration of all sensors you want to sort. This will add the attribute `daysTo` which can be used by e.g. [auto-entities](https://github.com/thomasloven/lovelace-auto-entities) to sort entities by day of next collection.
 
-
 ## How to add new sources
 
 1. Create a new source in folder `custom_components/waste_collection_schedule/waste_collection_schedule/source` with the lower case url of your service provider (e.g. `abc_com.py` for `http://www.abc.com`).
 2. Don't forget to add test cases (= sample data to query the service api).
 3. Run `test_sources.py` script to ensure that your source works.
 4. Add documentation in folder `docs/source` and add a link to your new source on `README.md` and `info.md`.
+
+### Guidelines
+
+- A source shall return data for all available waste types. A source shall **not** provide a configuration option to limit the returned waste types.
+- A source shall return data for the entire available period (including past). A source shall **not** provide a configuration option to limit the requested period.
+
+Filtering of data for waste types or time periods is a functionality of the framework and shall not be done by a source.
+
+### Source Code Example
 
 Example for `abc_com.py`:
 
@@ -604,5 +638,52 @@ class Source:
 
 See also: [custom_components/waste_collection_schedule/waste_collection_schedule/source/example.py](./custom_components/waste_collection_schedule/waste_collection_schedule/source/example.py)
 
-##Guides
-There is an HowTo Video in german: https://youtu.be/MzQgARDvRww
+### Debugging
+
+Debugging a source within Home Assistant is not recommended because startup of HA is far too slow for fast debugging cycles.
+
+Instead, there is a test fixture which allows to run a source from the command line. The fixture is a Python script which is located here:
+
+`custom_components/waste_collection_schedule/waste_collection_schedule/test/test_sources.py`.
+
+The script uses the test cases defined in the source file and runs the source with the arguments of every test case.
+
+By default (without additional arguments), the script tests every source file in the `source` folder and prints the number of found entries for every test case.
+
+Example output for `abfall_io`:
+
+```text
+Testing source abfall_io ...
+  found 269 entries for Waldenbuch
+  found 55 entries for Landshut
+  found 101 entries for Schoenmackers
+  found 139 entries for Freudenstadt
+  found 190 entries for Ludwigshafen am Rhein
+```
+
+The script supports the following options:
+
+Option | Argument | Description
+---- | ----- | ----
+`-s` | SOURCE | [Source name](https://github.com/mampfes/hacs_waste_collection_schedule#source-configuration-variables) (source file name without ending `.py`)
+`-l` | - | List all found dates
+`-i` | - | Add icon name to output. Only effective together with `-l`.
+
+For debugging purposes of a single source, it is recommended to use the `-s SOURCE` option.
+
+Example for `abc_com.py`:
+
+```bash
+test_sources.py -s abc_com -l -i
+```
+
+## Videos
+
+There is some video's on YouTube:
+
+### German
+
+- [Bunte Mülltonnenerinnerung mit Home Assistant](https://youtu.be/MzQgARDvRww)
+- [Abfall Kalender in Home Assistant mit Erinnerung in Home Assistant](https://youtu.be/aCKLKGYiA7w)
+
+Please note that all these videos are **not** created by the developer of this component and therefore may by outdated, point in the wrong direction or contain errors. If you have questions, please create an issue here on github. Do not ask your question in the YouTube comments because you may get wrong answers there.
