@@ -47,6 +47,7 @@ waste_collection_schedule:
 ### customer
 
 List of customers (2021-07-09):
+
 - `rmk`: AWG des Rems-Murr-Kreises mbH
 - `lra-schweinfurt`: Landkreis Schweinfurt
 - `gotha`: Landkreis Gotha
@@ -84,6 +85,6 @@ List of customers (2021-07-09):
 ### city, street, house number
 
 - Go to your calendar at `https://awido.cubefour.de/Customer/<customer>/v2/Calendar2.aspx`. Replace `<customer>` with the one of the keys listed above.
-- Enter your city name from the first page into the `city` field, except for single-city customers, then the parameter `city` is the city.
+- Enter your city name from the first page into the `city` field.
 - If you have to enter a street or district, enter the name into the `street` field.
 - If you have to enter a house number, enter the house number into the `housenumber` field.
