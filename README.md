@@ -51,20 +51,28 @@ The collection schedule will be automatically integrated into the Home Assistant
 Currently the following service providers are supported:
 
 - [Generic ICS / iCal File](./doc/source/ics.md)
+- [Static source](./doc/source/static.md)
 
 ### Australia
 
 - [Banyule City Council](./doc/source/banyule_vic_gov_au.md)
+- [Belmont City Council](./doc/source/belmont_wa_gov_au.md)
 - [Brisbane City Council](./doc/source/brisbane_qld_gov_au.md)
-- [North Adelaide Waste Management Authority, South Australia](./doc/source/nawma_sa_gov_au.md)
-- [The Hills Council, Sydney](./doc/source/thehills_nsw_gov_au.md)
+- [Campbelltown City Council](./doc/source/campbelltown_nsw_gov_au.md)
+- [Inner West Council (NSW)](./doc/source/innerwest_nsw_gov_au.md)
+- [Ku-ring-gai Council](./doc/source/kuringgai_nsw_gov_au.md)
 - [Macedon Ranges Shire Council, Melbourne](./doc/source/mrsc_vic_gov_au.md)
+- [Melton City Council, Melbourne](./doc/source/melton_vic_gov_au.md)
+- [North Adelaide Waste Management Authority, South Australia](./doc/source/nawma_sa_gov_au.md)
 - [Stonnington City Council, Melbourne](./doc/source/stonnington_vic_gov_au.md)
+- [The Hills Council, Sydney](./doc/source/thehills_nsw_gov_au.md)
+- [Wyndham City Council, Melbourne](./doc/source/wyndham_vic_gov_au.md)
 
 ### Austria
 
 - [BMV.at](./doc/source/bmv_at.md)
 - [Data.Umweltprofis](./doc/source/data_umweltprofis_at.md)
+- [WSZ-Moosburg.at](./doc/source/wsz_moosburg_at.md)
 
 ### Belgium
 
@@ -77,21 +85,30 @@ Currently the following service providers are supported:
 - [AbfallNavi.de (RegioIT.de)](./doc/source/abfallnavi_de.md)
 - [Abfallkalender Würzburg](./doc/source/wuerzburg_de.md)
 - [Abfallwirtschaft Landkreis Harburg](./doc/source/aw_harburg_de.md)
+- [Abfallwirtschaft Landkreis Wolfenbüttel](./doc/source/alw_wf_de.md)
+- [Abfallwirtschaft Neckar-Odenwald-Kreis](./doc/source/awn_de.md)
 - [Abfallwirtschaft Rendsburg](./doc/source/awr_de.md)
 - [Abfallwirtschaft Stuttgart](./doc/source/stuttgart_de.md)
 - [Abfallwirtschaft Südholstein](./doc/source/awsh_de.md)
 - [Abfallwirtschaft Zollernalbkreis](./doc/source/abfall_zollernalbkreis_de.md)
 - [AVL Ludwigsburg](./doc/source/avl_ludwigsburg_de.md)
 - [AWB Bad Kreuznach](./doc/source/awb_bad_kreuznach_de.md)
+- [AWB Esslingen](./doc/source/awb_es_de.md)
+- [AWB Limburg-Weilburg](./doc/source/awb_lm_de.md)
 - [AWB Oldenburg](./doc/source/awb_oldenburg_de.md)
 - [AWBKoeln.de](./doc/source/awbkoeln_de.md)
 - [AWIDO-online.de](./doc/source/awido_de.md)
 - [Berlin-Recycling.de](./doc/source/berlin_recycling_de.md)
 - [BSR.de / Berliner Stadtreinigungsbetriebe](./doc/source/bsr_de.md)
+- [C-Trace.de](./doc/source/c_trace_de.md)
+- [Cochem-Zell](./doc/source/cochem_zell_online_de.md)
 - [EGN-Abfallkalender.de](./doc/source/egn_abfallkalender_de.md)
 - [Jumomind.de](./doc/source/jumomind_de.md)
+- [KAEV Niederlausitz](./doc/source/kaev_niederlausitz_de.md)
 - [KWB-Goslar.de](./doc/source/kwb_goslar_de.md)
 - [Landkreis-Wittmund.de](./doc/source/landkreis_wittmund_de.md)
+- [Landkreis Rhön Grabfeld](./doc/source/landkreis_rhoen_grabfeld.md)
+- [Landkreis Schwäbisch Hall](./doc/source/lrasha_de.md)
 - [Muellmax.de](./doc/source/muellmax_de.md)
 - [MyMuell App](./doc/source/jumomind_de.md)
 - [Rhein-Hunsrück Entsorgung (RHE)](./doc/source/rh_entsorgung_de.md)
@@ -99,6 +116,7 @@ Currently the following service providers are supported:
 - [Stadtreinigung Dresden](./doc/source/stadtreinigung_dresden_de.md)
 - [Stadtreinigung.Hamburg](./doc/source/stadtreinigung_hamburg.md)
 - [Stadtreinigung-Leipzig.de](./doc/source/stadtreinigung_leipzig_de.md)
+- [Stadt-Willich.de](.doc/source/stadt_willich_de.md)
 - [WAS Wolfsburg](./doc/source/was_wolfsburg_de.md)
 
 ### Netherlands
@@ -111,27 +129,68 @@ Currently the following service providers are supported:
 - [Auckland](./doc/source/aucklandcouncil_govt_nz.md)
 - [Christchurch](./doc/source/ccc_govt_nz.md)
 - [Gore, Invercargill & Southland](./doc/source/wastenet_org_nz.md)
+- [Waipa District](./doc/source/waipa_nz.md)
 - [Wellington](./doc/source/wellington_govt_nz.md)
+
+## Norway
+
+- [Min Renovasjon](./doc/source/minrenovasjon_no.md)
+- [Oslo Kommune](./doc/source/oslokommune_no.md)
+
+### Poland
+
+- [Warsaw](./doc/source/warszawa19115_pl.md)
+- [Multiple communities - ecoharmonogram](./doc/source/ecoharmonogram_pl.md)
 
 ### Sweden
 
 - [Lerum.se](./doc/source/lerum_se.md)
+- [Ronneby Miljöteknik](./doc/source/miljoteknik_se.md)
+- [SSAM.se](./doc/source/ssam_se.md)
 - [Sysav.se](./doc/source/sysav_se.md)
+- [Vasyd.se](./doc/source/vasyd_se.md)
 
 ### Switzerland
 
+- [A-Region.ch](./doc/source/a_region_ch.md)
 - [Lindau.ch](./doc/source/lindau_ch.md)
+- [Münchenstein](./doc/source/muenchenstein_ch.md)
 
 ### United States of America
 
 - [PGH.ST](./doc/source/pgh_st.md)
+- [Republic Services](./doc/source/republicservices_com.md)
 - [Seattle Public Utilities](./doc/source/seattle_gov.md)
 
 ### United Kingdom
 
-- [Cambridge.gov.uk](./doc/source/cambridge_gov_uk.md)
-- [Colchester.gov.uk](./doc/source/colchester_gov_uk.md)
-- [York.gov.uk](./doc/source/york_gov_uk.md)
+- [Bradford Metropolitan District Council - bradford.gov.uk](./doc/source/bradford_gov_uk.md)
+- [Cambridge City Council - cambridge.gov.uk](./doc/source/cambridge_gov_uk.md)
+- [Canterbury City Council - canterbury.gov.uk](./doc/source/canterbury_gov_uk.md)
+- [Cheshire East Council - cheshireeast.gov.uk](./doc/source/cheshire_east_gov_uk.md)
+- [Chesterfield Borough Council - chesterfield.gov.uk](./doc/source/chesterfield_gov_uk.md)
+- [Colchester Borough Council - colchester.gov.uk](./doc/source/colchester_gov_uk.md)
+- [Cornwall Council - cornwall.gov.uk](./doc/source/cornwall_gov_uk.md)
+- [Derby City Council](./doc/source/derby_gov_uk.md)
+- [Eastbourne Borough Council - lewes-eastbourne.gov.uk](./doc/source/environmentfirst_co_uk.md)
+- [Elmbridge Borough Council - elmbridge_gov_uk](./doc/source/elmbridge_gov_uk.md)
+- [Guildford Borough Council - guildford.gov.uk](./doc/source/guildford_gov_uk.md)
+- [Harborough District Council - www.harborough.gov.uk](./doc/source/fccenvironment_co_uk.md)
+- [Huntingdonshire District Council - huntingdonshire.gov.uk](./doc/source/huntingdonshire_gov_uk.md)
+- [Lewes District Council - lewes-eastbourne.gov.uk](./doc/source/environmentfirst_co_uk.md)
+- [Manchester City Council - manchester.gov.uk](./doc/source/manchester_uk.md)
+- [Newcastle City Council - newcastle.gov.uk](./doc/source/newcastle_gov_uk.md)
+- [North Somerset Council - n-somerset.gov.uk](./doc/source/nsomerset_gov_uk.md)
+- [Nottingham City Council - nottinghamcity.gov.uk](./doc/source/nottingham_city_gov_uk.md)
+- [Peterborough City Council - peterborough.gov.uk](./doc/source/peterborough_gov_uk.md)
+- [Richmondshire District Council - richmondshire.gov.uk](./doc/source/richmondshire_gov_uk.md)
+- [Rushmoor Borough Council - rushmoor.gov.uk](./doc/source/rushmoor_gov_uk.md)
+- [South Cambridgeshire District Council - scambs.gov.uk](./doc/source/scambs_gov_uk.md)
+- [South Norfolk and Broadland Council - southnorfolkandbroadland.gov.uk](./doc/source/south_norfolk_and_broadland_gov_uk.md)
+- [Stevenage Borough Council - stevenage.gov.uk](./doc/source/stevenage_gov_uk.md)
+- [City of York Council - york.gov.uk](./doc/source/york_gov_uk.md)
+- [West Berkshire Council - westberks.gov.uk](./doc/source/westberks_gov_uk.md)
+- [Wiltshire Council - wiltshire.gov.uk](./doc/source/wiltshire_gov_uk.md)
 
 ## Installation
 
@@ -152,7 +211,7 @@ The configuration consists of two entries in the file `configuration.yaml`:
 
 1. Source configuration
 
-   For each service provider, a source has to be added to the configuration. The source takes care of the arguments which are required to get the correct information from the service providers' web page, e.g. district, city, street, house number, etc.
+   For each service provider, a source has to be added to the configuration. The source takes care of the arguments which are required to get the correct information from the service provider's web page, e.g. district, city, street, house number, etc.
 
    If you have to fetch data from multiple service providers, you have to add multiple sources. You can also add the same service provider multiple times (which only makes sense if you use this with different arguments), e.g. if you are looking for displaying the waste collection schedules for multiple districts.
 
@@ -178,6 +237,8 @@ waste_collection_schedule:
           show: SHOW
           icon: ICON
           picture: PICTURE
+          use_dedicated_calendar: USE_DEDICATED_CALENDAR
+          dedicated_calendar_title: DEDICATED_CALENDAR_TITLE
       calendar_title: CALENDAR_TITLE
   fetch_time: FETCH_TIME
   random_fetch_time_offset: RANDOM_FETCH_TIME_OFFSET
@@ -279,6 +340,18 @@ Alternative icon for waste type.
 
 Optional picture for waste type.
 
+**use_dedicated_calendar**
+
+*(boolean) (optional, default: ```False```)*
+
+Create a dedicated calendar for this type.
+
+**dedicated_calendar_title**
+
+*(string) (optional, default: ```None```)*
+
+Optional title of the dedicated calendar. If not set, the default of the source will be used.
+
 ## 2. Add sensor(s) to a source
 
 Add the following lines to your `configuration.yaml` file:
@@ -330,7 +403,7 @@ Possible choices:
   ![Waste Types](/doc/more-info-appointment-types.png)
 
 - ```generic``` provides all attributes as generic Python data types. This can be used by a specialized Lovelace card (which doesn't exist so far).<br>
-  
+
   ![Generic](./doc/more-info-generic.png)
 
 **count**
@@ -683,11 +756,11 @@ test_sources.py -s abc_com -l -i
 
 ## Videos
 
-There is some video's on YouTube:
+There are some videos on YouTube:
 
 ### German
 
 - [Bunte Mülltonnenerinnerung mit Home Assistant](https://youtu.be/MzQgARDvRww)
 - [Abfall Kalender in Home Assistant mit Erinnerung in Home Assistant](https://youtu.be/aCKLKGYiA7w)
 
-Please note that all these videos are **not** created by the developer of this component and therefore may by outdated, point in the wrong direction or contain errors. If you have questions, please create an issue here on github. Do not ask your question in the YouTube comments because you may get wrong answers there.
+Please note that all these videos are **not** created by the developer of this component and therefore may be outdated, point in the wrong direction or contain errors. If you have questions, please create an issue here on GitHub. Do not ask your question in the YouTube comments because you may get wrong answers there.
