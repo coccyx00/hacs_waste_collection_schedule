@@ -6,7 +6,8 @@ from waste_collection_schedule import Collection  # type: ignore[attr-defined]
 
 TITLE = "Abfallkalender Würzburg"
 DESCRIPTION = "Source for waste collection in the city of Würzburg, Germany."
-URL = "https://www.wuerzburg.de/themen/umwelt-verkehr/vorsorge-entsorgung/abfallkalender/32208.Abfallkalender.html"
+URL = "https://www.wuerzburg.de/themen/umwelt-klima/vorsorge-entsorgung/abfallkalender/32208.Abfallkalender.html"
+HEADERS = {"user-agent": "Mozilla/5.0 (xxxx Windows NT 10.0; Win64; x64)"}
 TEST_CASES = {
     "District only": {"district": "Altstadt"},
     "Street only": {"street": "Juliuspromenade"},
@@ -30,13 +31,19 @@ class Source:
         if not district and not street:
             raise ValueError("One of ['district', 'street'] is required.")
 
-        r = requests.get(URL)
+        r = requests.get(URL, headers=HEADERS)
         r.raise_for_status()
         selects = BeautifulSoup(r.content, "html.parser").body.find_all("select")
 
         if street:
             strlist = next(iter([s for s in selects if s["id"] == "strlist"]))
-            strdict = {option.text: option["value"] for option in strlist}
+            strdict = {
+                option.text: option.attrs["value"]
+                for option in strlist.children
+                if hasattr(option, "attrs") and "value" in option.attrs
+            }
+
+            hasattr(strlist.contents[2], "attr")
 
             try:
                 return strdict[street]
@@ -48,7 +55,9 @@ class Source:
         if district:
             reglist = next(iter([s for s in selects if s["id"] == "reglist"]))
             regdict = {
-                option.text: option.attrs["value"] for option in reglist.contents
+                option.text: option.attrs["value"]
+                for option in reglist.children
+                if hasattr(option, "attrs") and "value" in option.attrs
             }
 
             try:
@@ -70,6 +79,7 @@ class Source:
 
         r = requests.get(
             URL,
+            headers=HEADERS,
             params={
                 "_func": "evList",
                 "_mod": "events",
