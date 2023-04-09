@@ -25,25 +25,61 @@ ICON_MAP = {
     "HKARL1-H": "mdi:trash-can",
     "HKARL2": "mdi:recycle",
     "HKARL2-H": "mdi:recycle",
-    "HMAT": "mdi:leaf",
-    "HMAT-H": "mdi:leaf",
+    "HMAT": "mdi:food-apple",
+    "HMAT-H": "mdi:food-apple",
     "HREST": "mdi:trash-can",
     "HREST-H": "mdi:trash-can",
     "HOSORT": "mdi:trash-can",
     "HOSORT-H": "mdi:trash-can",
+    'FKARL1': "mdi:trash-can",  # Matavfall, Restavfall, Tidningar & Färgat glas
+    'FKARL2': "mdi:recycle", # Förpackningar av Papper, Plast & Metall samt Ofärgat glas
+    'FKARL1-H': "mdi:trash-can", # Matavfall, Restavfall, Tidningar & Färgat glas
+    'FKARL2-H': "mdi:recycle", # Förpackningar av Papper, Plast & Metall samt Ofärgat glas
+    'FOSORT': "mdi:trash-can",
+    'FOSORT-H': "mdi:trash-can",
+    'HREST-HK': "mdi:trash-can",
+    'HREST-HK-H': "mdi:trash-can",
+    'HKARL1-HK': "mdi:trash-can",  # Restavfall, Tidningar & Färgat glas
+    'HKARL1-HK-H': "mdi:trash-can",  # Restavfall, Tidningar & Färgat glas
+    'TRG': "mdi:leaf",
+    'TRG-H': "mdi:leaf",
+    'FREST-HK': "mdi:trash-can",
+    'FREST-HK-H': "mdi:trash-can",
+    'FKARL1-HK-H': "mdi:trash-can",
+    'FKARL1-HK': "mdi:trash-can",
+    'FREST': "mdi:trash-can",
+    'FREST-H': "mdi:trash-can",
 }
 
 NAME_MAP = {
     "HKARL1": "Fyrfackskärl 1",  # Matavfall, Restavfall, Tidningar & Färgat glas
-    "HKARL1-H": "Fyrfackskärl 1 (Helgvecka - hämtningsdagen kan avika)",  # Matavfall, Restavfall, Tidningar & Färgat glas
-    "HKARL2": "Fyrfackskärl 2",  # Förpackningar av Papper, Plast & Metall samt Ofärgat glas
-    "HKARL2-H": "Fyrfackskärl 2 (Helgvecka - hämtningsdagen kan avika)",  # Förpackningar av Papper, Plast & Metall samt Ofärgat glas
+    "HKARL1-H": "Fyrfackskärl 1 - Helgvecka", # Matavfall, Restavfall, Tidningar & Färgat glas
+    "HKARL2": "Fyrfackskärl 2", # Förpackningar av Papper, Plast & Metall samt Ofärgat glas
+    "HKARL2-H": "Fyrfackskärl 2 - Helgvecka", # Förpackningar av Papper, Plast & Metall samt Ofärgat glas
     "HMAT": "Matavfall",
-    "HMAT-H": "Matavfall (Helgvecka - hämtningsdagen kan avika)",
+    "HMAT-H": "Matavfall - Helgvecka",
     "HREST": "Restavfall",
-    "HREST-H": "Restavfall (Helgvecka - hämtningsdagen kan avika)",
+    "HREST-H": "Restavfall - Helgvecka",
     "HOSORT": "Blandat Mat- och Restavfall",
-    "HOSORT-H": "Blandat Mat- och Restavfall (Helgvecka - hämtningsdagen kan avika)",
+    "HOSORT-H": "Blandat Mat- och Restavfall - Helgvecka",
+    'FKARL1': "Fyrfackskärl 1",  # Matavfall, Restavfall, Tidningar & Färgat glas
+    'FKARL2': "Fyrfackskärl 2", # Förpackningar av Papper, Plast & Metall samt Ofärgat glas
+    'FKARL1-H': "Fyrfackskärl 1 - Helgvecka", # Matavfall, Restavfall, Tidningar & Färgat glas
+    'FKARL2-H': "Fyrfackskärl 2 - Helgvecka", # Förpackningar av Papper, Plast & Metall samt Ofärgat glas
+    'FOSORT': "Blandat Mat- och Restavfall",
+    'FOSORT-H': "Blandat Mat- och Restavfall - Helgvecka",
+    'HREST-HK': "Restavfall med Hemkompost",
+    'HREST-HK-H': "Restavfall med Hemkompost - Helgvecka",
+    'HKARL1-HK': "Fyrfackskärl 1 med Hemkompost",  # Restavfall, Tidningar & Färgat glas
+    'HKARL1-HK-H': "Fyrfackskärl 1 med Hemkompost - Helgvecka",  # Restavfall, Tidningar & Färgat glas
+    'TRG': "Trädgårdskärl",
+    'TRG-H': "Trädgårdskärl - Helgvecka",
+    'FREST-HK': "Restavfall med Hemkompost",
+    'FREST-HK-H': "Restavfall med Hemkompost - Helgvecka",
+    'FKARL1-HK-H': "Fyrfackskärl 1 med Hemkompost",
+    'FKARL1-HK': "Fyrfackskärl 1 med Hemkompost - Helgvecka",
+    'FREST': "Restavfall",
+    'FREST-H': "Restavfall - Helgvecka",
 }
 
 MONTH_MAP = {
@@ -74,11 +110,11 @@ class Source:
         )
         adresslist.raise_for_status()
 
-        adresstaddict = (self.street.lower(), self.city.lower())
-        adresstadjoined = "|".join(adresstaddict)
+        streetcitylist = (self.street.lower(), self.city.lower())
+        streetcityjoined = "|".join(streetcitylist)
         adresslistalines = adresslist.text.lower().splitlines()
         for line in adresslistalines:
-            if adresstadjoined in line:
+            if streetcityjoined in line:
                 A = line.split("|")[-1]
 
         payload = {"hsG": self.street, "hsO": self.city, "nrA": A}
@@ -89,9 +125,12 @@ class Source:
 
         soup = BeautifulSoup(wasteschedule.text, "html.parser")
 
+        #Calender uses diffrent tags for the last week of the month
+        wastedays = soup.find_all("td", {"style":"styleDayHit"}) + soup.find_all("td", "styleDayHit")
+
         entries = []
         # get a list of all tags with waste collection days for the current year
-        for wasteday in soup.find_all("td", "styleDayHit"):
+        for wasteday in wastedays:
             wasteday_wastetype = wasteday.parent.parent
             # find month and year for given day
             monthyear = wasteday_wastetype.find_previous(
@@ -100,21 +139,23 @@ class Source:
             monthyear_parts = str(monthyear).split("-")
             month = MONTH_MAP[monthyear_parts[0].strip(" []/'")]
             year = int(monthyear_parts[1].strip(" []/'"))
+
+            #Diffrent tag on collection day
             day = int(
-                str(wasteday_wastetype.find("div", "styleInteIdag").contents).strip(
-                    " []/'"
-                )
+                str(wasteday_wastetype.find("div", ["styleInteIdag", "styleIdag"]).contents[0])
             )
             # list of bins collected for given day
             for td in wasteday_wastetype.contents[3].find_all("td"):
                 if td.has_attr("class"):
                     waste = str(td.get_attribute_list("class")).strip(" []/'")
-                    entries.append(
-                        Collection(
-                            t=NAME_MAP.get(waste),
-                            # t = waste, #used when identifying new types of bins
-                            date=datetime.date(year, month, day),
-                            icon=ICON_MAP.get(waste),
-                        )
+                    if waste in NAME_MAP:
+                        t=NAME_MAP.get(waste)
+                        icon=ICON_MAP.get(waste)
+                        entries.append(
+                            Collection(
+                                t=t,
+                                icon=icon,
+                                date=datetime.date(year, month, day),                       
+                            )
                     )
         return entries
