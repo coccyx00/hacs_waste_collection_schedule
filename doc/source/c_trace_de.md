@@ -11,6 +11,8 @@ waste_collection_schedule:
       args:
         service: SERVICE
         ort: ORT
+        gemeinde: GEMEINDE
+        ortsteil: ORTSTEIL
         strasse: STRASSE
         hausnummer: HAUSNUMMER
 ```
@@ -25,6 +27,14 @@ Name of the service which is specific to your municipality. See the table below 
 *(string) (optional)*
 Needed for most municipalities but no all
 
+**ort**  
+*(string) (optional)*
+Needed for some municipalities but no all (can be left empty if same as ort)
+
+**ortsteil**  
+*(string) (optional)*
+Needed only for some municipalities but no all
+
 **strasse**  
 *(string) (required)*
 
@@ -32,6 +42,18 @@ Needed for most municipalities but no all
 *(string) (required)*
 
 ## Example
+
+```yaml
+waste_collection_schedule:
+  sources:
+  - name: c_trace_de
+    args:
+      ort: Riedstadt
+      ortsteil: Crumstadt
+      strasse: Am Lohrrain
+      hausnummer: 3
+      service: grossgeraulandkreis-abfallkalender
+```
 
 ```yaml
 waste_collection_schedule:
@@ -52,6 +74,18 @@ waste_collection_schedule:
       strasse: Am Kindergarten
       hausnummer: 1
       service: landau
+```
+
+```yaml
+waste_collection_schedule:
+  sources:
+  - name: c_trace_de
+    args:
+      strasse: Am Reidigermeer
+      hausnummer: 2d/e
+      service: aurich-abfallkalender
+      gemeinde: Aurich
+      ort: Kirchdorf
 ```
 
 ## How to get the source arguments
@@ -88,4 +122,4 @@ Link for above image: https://web.c-trace.de/segebergwzv-abfallkalender/(S(ebi2z
 
 From this Link you can extract the following parameters:
 
-`web|app`.c-trace.de/`(web.)service`/some-id/abfallkalender/`cal|downloadcal`/year?Ort=`ort`&Strasse=`strasse`&Hausnr=`hausnummer`...
+`web|app`.c-trace.de/`(web.)service`/some-id/abfallkalender/`cal|downloadcal` `/year|`?Ort=`ort`&Ortsteil=`ortsteil`&Strasse=`strasse`&Hausnr=`hausnummer`...

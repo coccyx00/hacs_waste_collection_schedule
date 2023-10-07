@@ -118,6 +118,7 @@ def browse_sources():
 
     update_awido_de(modules)
     update_ctrace_de(modules)
+    update_citiesapps_com(modules)
 
     return sources
 
@@ -131,7 +132,7 @@ def browse_ics_yaml():
     files = yaml_dir.glob("*.yaml")
     sources = []
     for f in files:
-        with open(f) as stream:
+        with open(f, encoding="utf-8") as stream:
             # write markdown file
             filename = (md_dir / f.name).with_suffix(".md")
             data = yaml.safe_load(stream)
@@ -146,6 +147,16 @@ def browse_ics_yaml():
                     country=data.get("country", f.stem.split("_")[-1]),
                 )
             )
+            if "extra_info" in data:
+                for e in data["extra_info"]:
+                    sources.append(
+                        SourceInfo(
+                            filename=f"/doc/ics/{filename.name}",
+                            title=e.get("title"),
+                            url=e.get("url"),
+                            country=e.get("country"),
+                        )
+                    )
 
     update_ics_md(sources)
 
@@ -178,7 +189,7 @@ def write_ics_md_file(filename, data):
         md += multiline_indent(yaml.dump(tc).rstrip("\n"), 8) + "\n"
         md += "```\n"
         # md += "\n"
-    with open(filename, "w") as f:
+    with open(filename, "w", encoding="utf-8") as f:
         f.write(md)
 
 
@@ -200,7 +211,9 @@ def update_ics_md(sources):
         str += f"### {country}\n"
         str += "\n"
 
-        for e in sorted(countries[country], key=lambda e: e.title.lower()):
+        for e in sorted(
+            countries[country], key=lambda e: (e.title.lower(), beautify_url(e.url))
+        ):
             str += f"- [{e.title}]({e.filename}) / {beautify_url(e.url)}\n"
 
         str += "\n"
@@ -230,7 +243,9 @@ def update_readme_md(countries):
         str += f"<summary>{country}</summary>\n"
         str += "\n"
 
-        for e in sorted(countries[country], key=lambda e: e.title.lower()):
+        for e in sorted(
+            countries[country], key=lambda e: (e.title.lower(), beautify_url(e.url))
+        ):
             # print(f"  {e.title} - {beautify_url(e.url)}")
             str += f"- [{e.title}]({e.filename}) / {beautify_url(e.url)}\n"
 
@@ -246,7 +261,13 @@ def update_info_md(countries):
     for country in sorted(countries):
         str += f"| {country} | "
         str += ", ".join(
-            [e.title for e in sorted(countries[country], key=lambda e: e.title.lower())]
+            [
+                e.title
+                for e in sorted(
+                    countries[country],
+                    key=lambda e: (e.title.lower(), beautify_url(e.url)),
+                )
+            ]
         )
         str += " |\n"
 
@@ -283,9 +304,23 @@ def update_ctrace_de(modules):
     _patch_file("doc/source/c_trace_de.md", "service", str)
 
 
+def update_citiesapps_com(modules):
+    module = modules.get("citiesapps_com")
+    if not module:
+        print("citiesapps_com not found")
+        return
+    services = getattr(module, "SERVICE_MAP", [])
+
+    str = "|City|Website|\n|-|-|\n"
+    for service in sorted(services, key=lambda service: service["title"]):
+        str += f'| {service["title"]} | [{beautify_url(service["url"])}]({service["url"]}) |\n'
+
+    _patch_file("doc/source/citiesapps_com.md", "service", str)
+
+
 def _patch_file(filename, section_id, str):
     # read entire file
-    with open(filename) as f:
+    with open(filename, encoding="utf-8") as f:
         md = f.read()
 
     section = Section(section_id)
@@ -297,7 +332,7 @@ def _patch_file(filename, section_id, str):
     md = md[:start_pos] + str + md[end_pos:]
 
     # write entire file
-    with open(filename, "w") as f:
+    with open(filename, "w", encoding="utf-8") as f:
         f.write(md)
 
 
@@ -354,8 +389,16 @@ COUNTRYCODES = [
         "name": "Germany",
     },
     {
+        "code": "dk",
+        "name": "Denmark",
+    },
+    {
         "code": "hamburg",
         "name": "Germany",
+    },
+    {
+        "code": "hu",
+        "name": "Hungary",
     },
     {
         "code": "lt",
@@ -400,6 +443,10 @@ COUNTRYCODES = [
     {
         "code": "uk",
         "name": "United Kingdom",
+    },
+    {
+        "code": "fr",
+        "name": "France",
     },
 ]
 
